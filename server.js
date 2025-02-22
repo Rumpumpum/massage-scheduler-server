@@ -1,6 +1,9 @@
 const express = require('express');
+const cors = require('cors'); // Добавьте cors
 const app = express();
+
 app.use(express.json());
+app.use(cors()); // Разрешить запросы с других доменов
 
 let bookings = {};
 
